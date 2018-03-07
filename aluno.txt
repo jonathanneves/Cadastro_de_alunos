@@ -1,0 +1,4 @@
+3,Adriano karas,Masc,19,S,Criciuma (SC)
+5,Fernanda,Femi,20,S,Curitiba (PR)
+1,Jonathan Neves,Masc,19,S,Tubarão (SC)
+4,Ricardo,Masc,20,S,Laguna (SC)

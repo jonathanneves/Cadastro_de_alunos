@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<!-- Mapeamento -->
+<!--  BorderPane   fx:controller="controller.Controller01 -->
+<!--  View tem os fxml e Controller(package) tem todos os controlador -->
+
+<BorderPane xmlns="http://javafx.com/javafx/8.0.102" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AlunoController">
+   <center>
+      <Pane BorderPane.alignment="CENTER">
+         <children>
+            <VBox>
+               <children>
+                  <HBox>
+                     <children>
+                        <Label prefHeight="29.0" prefWidth="57.0" text="Nome:">
+                           <font>
+                              <Font name="Century Gothic" size="16.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </HBox.margin>
+                           <padding>
+                              <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                           </padding>
+                        </Label>
+                        <TextField fx:id="txtNomeAluno" prefHeight="27.0" prefWidth="307.0" promptText="Digite seu Nome Completo">
+                           <padding>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </padding>
+                           <HBox.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </HBox.margin>
+                        </TextField>
+                     </children>
+                  </HBox>
+                  <HBox>
+                     <children>
+                        <Label prefHeight="29.0" prefWidth="47.0" text="Sexo:">
+                           <font>
+                              <Font name="Century Gothic" size="16.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </HBox.margin>
+                           <padding>
+                              <Insets bottom="2.0" left="2.0" top="2.0" />
+                           </padding>
+                        </Label>
+                        <RadioButton fx:id="rdMasc" mnemonicParsing="false" text="Masculino">
+                           <HBox.margin>
+                              <Insets bottom="5.0" left="3.0" right="3.0" top="5.0" />
+                           </HBox.margin>
+                           <padding>
+                              <Insets bottom="5.0" top="5.0" />
+                           </padding>
+                           <toggleGroup>
+                              <ToggleGroup fx:id="grs" />
+                           </toggleGroup>
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </RadioButton>
+                        <RadioButton fx:id="rdFemi" mnemonicParsing="false" text="Feminino" toggleGroup="$grs">
+                           <HBox.margin>
+                              <Insets bottom="5.0" left="3.0" right="3.0" top="5.0" />
+                           </HBox.margin>
+                           <padding>
+                              <Insets bottom="5.0" top="5.0" />
+                           </padding>
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </RadioButton>
+                        <Label prefHeight="29.0" prefWidth="58.0" text="Idade:">
+                           <font>
+                              <Font name="Century Gothic" size="16.0" />
+                           </font>
+                           <padding>
+                              <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                           </padding>
+                           <HBox.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </HBox.margin>
+                        </Label>
+                        <TextField fx:id="txtidade" prefHeight="27.0" prefWidth="88.0" promptText="Digite Idade">
+                           <HBox.margin>
+                              <Insets bottom="5.0" right="5.0" top="5.0" />
+                           </HBox.margin>
+                           <padding>
+                              <Insets bottom="5.0" left="2.0" right="5.0" top="5.0" />
+                           </padding>
+                        </TextField>
+                     </children>
+                  </HBox>
+                  <HBox />
+                  <HBox>
+                     <children>
+                        <Label prefHeight="29.0" prefWidth="76.0" text="Cidade:">
+                           <font>
+                              <Font name="Century Gothic" size="16.0" />
+                           </font>
+                           <padding>
+                              <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                           </padding>
+                           <HBox.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </HBox.margin>
+                        </Label>
+                        <ComboBox fx:id="comboCidade" onMouseClicked="#atualizaCombo" prefHeight="29.0" prefWidth="287.0" promptText="Selecione sua Cidade">
+                           <HBox.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </HBox.margin>
+                           <padding>
+                              <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                           </padding>
+                        </ComboBox>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER">
+                     <children>
+                        <Button alignment="CENTER_RIGHT" mnemonicParsing="false" onAction="#insereAluno" text="Incluir">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Button alignment="CENTER_RIGHT" mnemonicParsing="false" onAction="#alteraAluno" text="Alterar">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Button alignment="CENTER_RIGHT" mnemonicParsing="false" onAction="#excluiAluno" text="Excluir">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </HBox.margin>
+                        </Button>
+                     </children>
+                  </HBox>
+                  <HBox>
+                     <children>
+                        <Label prefHeight="31.0" prefWidth="59.0" text="Filtro:">
+                           <font>
+                              <Font name="Century Gothic" size="16.0" />
+                           </font>
+                           <padding>
+                              <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                           </padding>
+                           <HBox.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </HBox.margin>
+                        </Label>
+                        <TextField fx:id="txtFiltroAluno" onKeyPressed="#filtrarAluno" prefHeight="27.0" prefWidth="304.0" promptText="Filtrar por Nome">
+                           <padding>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </padding>
+                           <HBox.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </HBox.margin>
+                        </TextField>
+                     </children>
+                  </HBox>
+                  <TableView fx:id="tablealuno" onMouseClicked="#clicaTblAluno" prefHeight="191.0">
+                     <columns>
+                        <TableColumn fx:id="colNomeAluno" prefWidth="125.0" text="Nome" />
+                        <TableColumn fx:id="colSexo" prefWidth="66.0" text="Sexo" />
+                        <TableColumn fx:id="colIdade" prefWidth="50.0" text="Idade" />
+                        <TableColumn fx:id="colCidade" prefWidth="85.0" text="Cidade" />
+                        <TableColumn fx:id="colUfAluno" prefWidth="45.0" text="UF" />
+                     </columns>
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </VBox.margin>
+                  </TableView>
+               </children>
+            </VBox>
+         </children>
+      </Pane>
+   </center>
+</BorderPane>

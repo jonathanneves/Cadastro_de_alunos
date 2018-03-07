@@ -1,0 +1,7 @@
+8,Acre,AC,S
+4,Criciuma,SC,S
+2,Curitiba,PR,S
+7,Laguna,SC,S
+6,Porto Alegre,RS,S
+3,Sao Paulo,SP,S
+1,Tubarão,SC,S

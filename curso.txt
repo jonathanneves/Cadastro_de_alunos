@@ -1,0 +1,5 @@
+6,Biologia,S
+2,Ciência da Computação,S
+1,Direito,S
+4,Engenharia Elétrica,S
+3,Matemática,S

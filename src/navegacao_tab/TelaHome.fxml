@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane prefHeight="360.0" prefWidth="417.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="navegacao_tab.MainController">
+   <top>
+      <Label text="Tela Principal" BorderPane.alignment="CENTER">
+         <font>
+            <Font name="Comic Sans MS" size="50.0" />
+         </font>
+         <BorderPane.margin>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </BorderPane.margin>
+         <padding>
+            <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+         </padding>
+      </Label>
+   </top>
+   <center>
+      <VBox prefHeight="132.0" prefWidth="357.0" BorderPane.alignment="CENTER">
+         <children>
+            <MenuBar prefHeight="35.0" prefWidth="407.0">
+              <menus>
+                <Menu mnemonicParsing="false" text="Abrir">
+                  <items>
+                    <MenuItem mnemonicParsing="false" onAction="#abreJanela1" text="Tela 1" />
+                        <MenuItem mnemonicParsing="false" onAction="#abreJanela2" text="Tela 2" />
+                        <MenuItem mnemonicParsing="false" onAction="#abreJanela3" text="Tela 3" />
+                        <Menu mnemonicParsing="false" text="Menu Teste">
+                          <items>
+                            <MenuItem mnemonicParsing="false" text="Teste 1" />
+                              <MenuItem mnemonicParsing="false" text="Teste 2" />
+                          </items>
+                        </Menu>
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                        <MenuItem mnemonicParsing="false" text="Sair" />
+                  </items>
+                </Menu>
+              </menus>
+            </MenuBar>
+            <TabPane fx:id="tabPane" prefHeight="275.0" prefWidth="348.0" style="-fx-border-color: black; -fx-border-width: 1.5;" tabClosingPolicy="ALL_TABS">
+               <VBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </VBox.margin>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </TabPane>
+         </children>
+      </VBox>
+   </center>
+   <opaqueInsets>
+      <Insets />
+   </opaqueInsets>
+   <padding>
+      <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+   </padding>
+</BorderPane>

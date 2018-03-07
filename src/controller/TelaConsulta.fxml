@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane prefHeight="400.0" xmlns="http://javafx.com/javafx/8.0.102" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ConsultaController">
+   <center>
+      <VBox BorderPane.alignment="CENTER">
+         <children>
+            <HBox>
+               <children>
+                  <Label prefHeight="24.0" prefWidth="95.0" text="Busca p/ UF">
+                     <font>
+                        <Font name="Century Gothic" size="15.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </HBox.margin>
+                     <padding>
+                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                     </padding>
+                  </Label>
+                  <ComboBox fx:id="comboUFConsulta" prefHeight="30.0" prefWidth="198.0" promptText="Selecione um UF">
+                     <HBox.margin>
+                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                     </HBox.margin>
+                  </ComboBox>
+                  <ImageView fitHeight="37.0" fitWidth="37.0" onMouseClicked="#ConsultarPorUF" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icone/1455554848_line-64_icon-icons.com_53332.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                     </HBox.margin>
+                     <effect>
+                        <DropShadow height="0.0" radius="1.5" width="8.0" />
+                     </effect>
+                  </ImageView>
+               </children>
+               <VBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </VBox.margin>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </HBox>
+            <HBox>
+               <children>
+                  <Label prefHeight="24.0" prefWidth="109.0" text="Busca p/ Sexo">
+                     <font>
+                        <Font name="Century Gothic" size="15.0" />
+                     </font>
+                     <padding>
+                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                     </padding>
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </HBox.margin>
+                  </Label>
+                  <RadioButton fx:id="rdMascConsulta" mnemonicParsing="false" text="Masculino">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="sexo" />
+                     </toggleGroup>
+                     <font>
+                        <Font name="Arial Bold" size="13.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="2.0" right="5.0" top="5.0" />
+                     </HBox.margin>
+                  </RadioButton>
+                  <RadioButton fx:id="rdFemiConsulta" mnemonicParsing="false" text="Feminino" toggleGroup="$sexo">
+                     <font>
+                        <Font name="Arial Bold" size="13.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="2.0" right="5.0" top="5.0" />
+                     </HBox.margin>
+                  </RadioButton>
+                  <ImageView fitHeight="37.0" fitWidth="37.0" onMouseClicked="#ConsultarPorSexo" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icone/1455554848_line-64_icon-icons.com_53332.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets bottom="2.0" left="5.0" right="2.0" top="2.0" />
+                     </HBox.margin>
+                     <effect>
+                        <DropShadow height="0.0" radius="1.5" width="8.0" />
+                     </effect>
+                  </ImageView>
+               </children>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+               <VBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox prefHeight="51.0" prefWidth="353.0">
+               <children>
+                  <Label text="Busca p/ Curso">
+                     <font>
+                        <Font name="Century Gothic" size="15.0" />
+                     </font>
+                     <padding>
+                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                     </padding>
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </HBox.margin>
+                  </Label>
+                  <ComboBox fx:id="comboCursoConsulta" onMouseClicked="#atualizaCombo" prefHeight="30.0" prefWidth="178.0" promptText="Selecione Curso">
+                     <HBox.margin>
+                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                     </HBox.margin>
+                  </ComboBox>
+                  <ImageView fitHeight="37.0" fitWidth="37.0" onMouseClicked="#ConsultarPorCurso" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icone/1455554848_line-64_icon-icons.com_53332.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                     </HBox.margin>
+                     <effect>
+                        <DropShadow height="0.0" radius="1.5" width="8.0" />
+                     </effect>
+                  </ImageView>
+               </children>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+               <VBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </VBox.margin>
+            </HBox>
+            <TableView fx:id="tableConsulta" prefWidth="358.0">
+              <columns>
+                  <TableColumn fx:id="colConsulta" maxWidth="384.0" minWidth="384.0" prefWidth="384.0" text="Resultado da Consulta" />
+              </columns>
+               <VBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </VBox.margin>
+            </TableView>
+         </children>
+      </VBox>
+   </center>
+</BorderPane>

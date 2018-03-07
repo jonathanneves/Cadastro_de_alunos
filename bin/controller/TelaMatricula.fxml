@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<!-- Mapeamento -->
+<!--  BorderPane   fx:controller="controller.Controller01 -->
+<!--  View tem os fxml e Controller(package) tem todos os controlador -->
+
+<BorderPane prefHeight="425.0" prefWidth="391.0" xmlns="http://javafx.com/javafx/8.0.102" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MatriculaController">
+   <center>
+      <Pane prefHeight="336.0" prefWidth="391.0" BorderPane.alignment="CENTER">
+         <children>
+            <VBox prefWidth="391.0">
+               <children>
+                  <HBox>
+                     <children>
+                        <Label text="Aluno" translateY="4.0">
+                           <font>
+                              <Font name="Century Gothic" size="17.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </HBox.margin>
+                           <padding>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </padding>
+                        </Label>
+                        <ComboBox fx:id="comboAluno" onMouseClicked="#atualizaAluno" prefHeight="34.0" prefWidth="251.0" promptText="Selecione o Aluno">
+                           <HBox.margin>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </HBox.margin>
+                        </ComboBox>
+                        <ImageView fx:id="imgFiltroAluno" fitHeight="45.0" fitWidth="42.0" onMouseClicked="#filtraPorAluno" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../icone/1455554848_line-64_icon-icons.com_53332.png" />
+                           </image>
+                           <HBox.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </HBox.margin>
+                           <effect>
+                              <DropShadow blurType="ONE_PASS_BOX" height="12.0" radius="5.5" width="12.0" />
+                           </effect>
+                        </ImageView>
+                     </children>
+                  </HBox>
+                  <HBox>
+                     <children>
+                        <Label text="Curso" translateY="4.0">
+                           <font>
+                              <Font name="Century Gothic" size="17.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </HBox.margin>
+                           <padding>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </padding>
+                        </Label>
+                        <ComboBox fx:id="comboCurso" onMouseClicked="#atualizaCurso" prefHeight="33.0" prefWidth="251.0" promptText="Selecione o Curso">
+                           <HBox.margin>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </HBox.margin>
+                        </ComboBox>
+                        <ImageView fx:id="imgFiltroCurso" fitHeight="45.0" fitWidth="42.0" onMouseClicked="#filtraPorCurso" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../icone/1455554848_line-64_icon-icons.com_53332.png" />
+                           </image>
+                           <HBox.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </HBox.margin>
+                           <effect>
+                              <DropShadow blurType="ONE_PASS_BOX" height="12.1" radius="5.55" width="12.1" />
+                           </effect>
+                        </ImageView>
+                     </children>
+                  </HBox>
+                  <Button alignment="CENTER" contentDisplay="CENTER" graphicTextGap="0.0" mnemonicParsing="false" onAction="#matricular" text="Matricular">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="155.0" right="5.0" top="5.0" />
+                     </VBox.margin>
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                  </Button>
+                  <TableView fx:id="tableMatricula" prefHeight="250.0" prefWidth="381.0">
+                     <columns>
+                        <TableColumn fx:id="colBusca" prefWidth="399.0" text="Resultado da busca" />
+                     </columns>
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </VBox.margin>
+                  </TableView>
+               </children>
+            </VBox>
+         </children>
+      </Pane>
+   </center>
+</BorderPane>
